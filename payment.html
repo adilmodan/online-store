@@ -3,13 +3,13 @@
 
 <head>
 	<title>SCAM CLOTHING</title>
-
+	<link rel="stylesheet" type="text/css" href="payment.css">
 </head>
 
 <body style="margin:0">
 
 	<!-- Start Header -->
-	<table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#f3971b">
+	<table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#292929">
 		<tr>
 			<td>
 				<table border="0" width="85%" cellpadding="15" cellspacing="0" align="center">
@@ -43,7 +43,7 @@
 							</font>
 						</td>
 						<td>
-							<font face="arial" color="black" size="5">
+							<font face="arial" color="white" size="5">
 								<strong>SCÀM CLOTHING</strong>
 							</font>
 						</td>
@@ -97,156 +97,79 @@
 	<!-- End Header -->
 
 
-	<!-- Start Payment -->
-	<table border="0" id="contact" width="100%" cellpadding="0" cellspacing="0" bgcolor="#292929">
-		<tr>
-			<td>
-				<table border="0" width="85%" cellpadding="15" cellspacing="0" align="center">
-					<!-- Heading Start-->
-					<tr>
-						<td height="160" align="center" valign="middle">
-							<font face="arial" size="6" color=" #f3971b">
-								Payment
-							</font>
-							<hr width="70" color="#f3971b">
-						</td>
-					</tr>
-					<!-- Heading  End-->
-                    <style>
-#buttonStyle {
-border-radius: 200px;
-}
-</style>
-					<tr>
-						<td align="center" valign="top">
-							<table border="0" width="55%" cellpadding="20" cellspacing="0" align="center"
-								bgcolor="#292929">
-								<tr>
-									<td>
-										<table border="0" width="100%" cellpadding="15" cellspacing="0" align="center"
-											bgcolor="#292929">
-											<tr>
-												<td width="30%">
-													<font face="arial" size="4" color="#ffffff">
-														Username/Email
-													</font>
-
-												</td>
-												<td width="70%">
-													<input type="text" size="50">
-												</td>
-											</tr>
-											<tr>
-												<td width="30%">
-													<font face="arial" size="4" color="#ffffff">
-														Password
-													</font>
-
-												</td>
-												<td width="70%">
-													<input type="password" size="50">
-												</td>
-											</tr>
-											<tr>
-												<td width="30%">
-													<font face="arial" size="4" color="#ffffff">
-														Credit Card Number
-													</font>
-
-												</td>
-												<td width="70%">
-													<input type="text" maxlength="16" size="50">
-												</td>
-											</tr>
-
-
-											<tr>
-												<td width="30%">
-													<font face="arial" size="4" color="#ffffff">
-														Name On Card
-													</font>
-
-												</td>
-												<td width="70%">
-													<input type="text" size="50">
-												</td>
-											</tr>
-
-											<tr>
-												<td width="30%">
-													<font face="arial" size="4" color="#ffffff">
-														CVV Code
-													</font>
-
-												</td>
-												<td width="70%">
-													<input type="password"  maxlength="3" size="50">
-												</td>
-											</tr>
-
-											<tr>
-												<td width="30%">
-													<font face="arial" size="4" color="#ffffff">
-														Address
-													</font>
-
-												</td>
-												<td width="70%">
-													<input type="text" size="50">
-
-												</td>
-											</tr>
-
-
-
-
-											<tr>
-												<td width="30%">
-													&nbsp;
-												</td>
-												<td width="70%">
-													<p>
-														<a href="index.html#home">
-															<button id = "buttonStyle"  type="submit">
-																<font size="5" face="arial"
-																	onclick="alert('Ordered! Your package will be successfully delivered within 27 years, 364 days, and 16 hours.')">
-																	Proceed To Check Out</font>
-															</button>
-														</a>
-     
-     <h2><font color = "#292929">.</font></h2>
-														<a href="index.html#products">
-															<button id = "buttonStyle"  type="submit">
-
-																<font size="5" face="arial"
-																	onclick="alert('Your Items have been successfully removed from cart. Note: There will be a $5 fee for each Item removed from cart.')">
-																	Remove From Cart</font>
-															</button>
-														</a>
-													</p>
-
-
-											</tr>
-
-										</table>
-									</td>
-								</tr>
-							</table>
-						</td>
-					</tr>
-					<!-- section padding bottom -->
-					<tr>
-						<td height="60">
-
-						</td>
-					</tr>
-					<!-- section padding bottom End-->
-				</table>
-			</td>
-		</tr>
-	</table>
-	<!-- End Payment -->
-
-
+	<br><br><br><br>
+	<font face="arial" color="white" size="5">
+	  <strong><center>PLEASE ENTER YOUR CREDIT CARD INFORMATION</center></strong>
+	  </font>
+	<br>  
+	<font face="arial" color="white" size="3">
+	  <strong><center>We promise it's safe.</center></strong>
+	  </font>
+	<br><br><br><br><br>
+	<div id="card-success" class="hidden">
+	<i class="fa fa-check"></i>
+	<p>Payment Successful!</p>
+  </div>
+  <div id="form-errors" class="hidden">
+	<i class="fa fa-exclamation-triangle"></i>
+	<p id="card-error">Card error</p>
+  </div>
+  <div id="form-container">
+  
+	<div id="card-front">
+	  <div id="shadow"></div>
+	  <div id="image-container">
+		<span id="amount">amount due: <strong>$3500</strong></span>
+		<span id="card-image">
+		
+		  </span>
+	  </div>
+	  <!--- end card image container --->
+  
+	  <label for="card-number">
+		  Card Number
+		</label>
+	  <input type="text" id="card-number" placeholder="1111" maxlength='4' length="4">
+	  <input type="text" id="card-number" placeholder="2222" maxlength='4' length="4">
+	  <input type="text" id="card-number" placeholder="3333" maxlength='4' length="4">
+	  <input type="text" id="card-number" placeholder="4444" maxlength='4' length="4">
+	  <div id="cardholder-container">
+		<label for="card-holder">Card Holder
+		</label>
+		<input type="text" id="card-holder" placeholder="e.g. John Doe" />
+	  </div>
+	  <!--- end card holder container --->
+	  <div id="exp-container">
+		<label for="card-exp">
+			Expiration
+		  </label>
+		<input id="card-month" type="text" placeholder="MM" length="2">
+		<input id="card-year" type="text" placeholder="YY" length="2">
+	  </div>
+		  <div id="cvc-container">
+		<label for="card-cvc"> CVC/CVV</label>
+		<input id="card-cvc" placeholder="XXX-X" type="text" min-length="3" max-length="4">
+		<p>Last 3 or 4 digits</p>
+	  </div>
+	  <!--- end CVC container --->
+	  <!--- end exp container --->
+	</div>
+	<!--- end card front --->
+	<div id="card-back">
+	  <div id="card-stripe">
+	  </div>
+  
+	</div>
+	<!--- end card back --->
+	<a href="index.html#home">
+		<button id = "card-btn"  type="submit" onclick="alert('Ordered! Your package will be successfully delivered within 27 years, 364 days, and 16 hours.')">
+				Check Out
+		</button>
+	</a>
+	<a href="index.html#products">
+		<button id = "card-cancel"  type="submit" onclick="alert('Your Items have been successfully removed from cart. Note: There will be a $5 fee for each Item removed from cart.')">
+			Cancel Order
+		</button>
+	</a>
 </html>
 </body>
