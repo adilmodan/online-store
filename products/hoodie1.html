@@ -9,11 +9,48 @@
 <body style="margin:0">
 
     <!-- Start Header -->
+                            
+                                   <style>
+                 #buttonStyle{
+                   border-radius: 200px;
+                   }
+                 </style>
+                 
+                 
     <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#f3971b">
         <tr>
             <td>
                 <table border="0" width="85%" cellpadding="15" cellspacing="0" align="center">
                     <tr>
+                    
+                                        <td>
+                        
+							<font face="arial" color="black" size="5">
+                            
+							<head>
+<style>
+.loader {
+  border: 5px solid black;
+  border-radius: 20%;
+  border-top: 5px solid white;
+  width: 25px;
+  height: 25px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+</style>
+</head>
+<body>
+
+
+<div class="loader"></div>
+
+</body>
+							</font>
+						</td>
                         <td>
                             <font face="arial" color="black" size="5">
                                 <strong>SCÀM CLOTHING</strong>
@@ -148,12 +185,12 @@
                                                 </ul>
                                                 <hr noshade>
                                                 <br />
-                                                <button type="button" onclick="alert('Added To Cart!')">
+                                                <button id = "buttonStyle" type="button" onclick="alert('Added To Cart!')">
                                                     <font face="arial" size="5">Add To Cart</font>
                                                 </button>
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 <a href="../payment.html">
-                                                    <button type="button"
+                                                    <button id = "buttonStyle" type="button"
                                                         onclick="alert('Please enter your payment information.')">
                                                         <font face="arial" size="5">Order Now</font>
                                                     </button>
@@ -353,7 +390,7 @@
                                                 </td>
                                                 <td width="70%">
 
-                                                    <button type="submit" onclick="alert('Message Sent')">
+                                                    <button id = "buttonStyle" type="submit" onclick="alert('Message Sent')">
                                                         <font size="5" face="arial">Send Message</font>
                                                     </button>
 
