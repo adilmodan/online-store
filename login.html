@@ -15,33 +15,37 @@
 			<td>
 				<table border="0" width="85%" cellpadding="15" cellspacing="0" align="center">
 					<tr>
-                    
-                                        <td>
-                        
+
+						<td>
+
 							<font face="arial" color="black" size="5">
-                            
-							<head>
-<style>
-.loader {
-  border: 5px solid black;
-  border-radius: 20%;
-  border-top: 5px solid white;
-  width: 25px;
-  height: 25px;
-  animation: spin 2s linear infinite;
-}
 
-@keyframes spin {
-  100% { transform: rotate(360deg); }
-}
-</style>
-</head>
-<body>
+								<head>
+									<style>
+										.loader {
+											border: 5px solid black;
+											border-radius: 20%;
+											border-top: 5px solid white;
+											width: 25px;
+											height: 25px;
+											animation: spin 2s linear infinite;
+										}
+
+										@keyframes spin {
+											100% {
+												transform: rotate(360deg);
+											}
+										}
+									</style>
+								</head>
+
+								<body>
 
 
-<div class="loader"></div>
+									<div class="loader"></div>
 
-</body>
+								</body>
+								<table>
 							</font>
 						</td>
 						<td>
@@ -99,34 +103,36 @@
 	<!-- End Header -->
 
 	<!-- Start Sign Up -->
-	
-<div class="container">
-	<div class="details">
-	   <h1><center><u>Log In to Scàm Clothing</h1>
-	<input placeholder="username" id = "myText"></input> 
-	<input placeholder="password"></input>
-   <a href="index.html#home">
-	<button id="signup" type="submit"  onclick = "userName()" >Log In Now!
-  </button>
-   </a>
-	</div> 
-  </div>  
-  
-  <script>
-function userName() {
-	var x = document.getElementById("myText").value;
-	alert("Welcome back, " + x + "!");
-}
-</script>
+
+	<div class="container">
+		<div class="details">
+			<h1>
+				<center><u>Log In to Scàm Clothing
+			</h1>
+			<input placeholder="username" id="myText"></input>
+			<input placeholder="password"></input>
+			<a href="index.html#home">
+				<button id="signup" type="submit" onclick="userName()">Log In Now!
+				</button>
+			</a>
+		</div>
+	</div>
+
+	<script>
+		function userName() {
+			var x = document.getElementById("myText").value;
+			alert("Welcome back, " + x + "!");
+		}
+	</script>
 
 
-  </body>
-  
-  <footer>
-			<p>Don't have an account? <strong><a href="login.html">Create One Here</a></strong></p>
-			<p>Or to return home... <strong><a href="index.html">Click Here</a></strong></p>
+</body>
+
+<footer>
+	<p>Don't have an account? <strong><a href="login.html">Create One Here</a></strong></p>
+	<p>Or to return home... <strong><a href="index.html">Click Here</a></strong></p>
 </footer>
 
-	<!-- End Sign Up -->
+<!-- End Sign Up -->
 
 </html>
