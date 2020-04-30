@@ -103,18 +103,28 @@
 <div class="container">
 	<div class="details">
 	   <h1><center><u>Sign Up for Scàm Clothing</h1>
-	   <input placeholder="name"></input>
+	   <input placeholder="name" id = "myText"></input>
 	   <input placeholder="email"></input>
 	<input placeholder="username"></input> 
 	<input placeholder="password"></input>
 	<input placeholder="verify password"></input>
    <input placeholder="s.s.n"></input>
    <a href="index.html#home">
-	<button id="signup" type="submit"  onclick="alert('Account Created! We will be VERY responsible with most your information')">Sign Up Now!
+	<button id="signup" type="submit"  onclick="myFunction()">Sign Up Now! 
   </button>
    </a>
 	</div> 
   </div>  
+  
+  <script>
+function myFunction() {
+  var x = document.getElementById("myText").value;
+
+  alert("Account Created! We will be VERY responsible with most your information. Welcome To SCÁM, " + x + "!");
+}
+</script>
+
+
   </body>
   
   <footer>
