@@ -103,14 +103,23 @@
 <div class="container">
 	<div class="details">
 	   <h1><center><u>Log In to Scàm Clothing</h1>
-	<input placeholder="username"></input> 
+	<input placeholder="username" id = "myText"></input> 
 	<input placeholder="password"></input>
    <a href="index.html#home">
-	<button id="signup" type="submit"  onclick="alert('Welcome back!')">Log In Now!
+	<button id="signup" type="submit"  onclick = "userName()" >Log In Now!
   </button>
    </a>
 	</div> 
   </div>  
+  
+  <script>
+function userName() {
+	var x = document.getElementById("myText").value;
+	alert("Welcome back, " + x + "!");
+}
+</script>
+
+
   </body>
   
   <footer>
