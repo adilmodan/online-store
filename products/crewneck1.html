@@ -170,7 +170,7 @@
 
 
                                                 <h4>
-                                                    <font color=" #f3971b"> Price: $39.97</font>
+           <font color=" #f3971b"> Price: $ <font id="demo">39.97</font></font>
                                                     <font size="1"> + $5 shipping </font>
                                                 </h4>
 
@@ -196,8 +196,25 @@
                                                         Order Now
                                                     </button>
                                                 </a>
-                                    </td>
-                                </tr>
+                                                
+<p></p>
+ Quantity: <input type="number" id="myText" value="Name">
+
+
+
+<button onclick="myFunction()"> item(s)</button>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myText").value;
+	x = 39.97*x;
+    document.getElementById("demo").innerHTML = x;
+}
+
+</script>
+
+                                    </td>                               
+                                </tr>          
                             </table>
                         </td>
                     </tr>
