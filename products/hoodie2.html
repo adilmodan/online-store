@@ -3,6 +3,23 @@
 
 <head>
     <title>Scàm Gradient Hoodie</title>
+    <script src="../addToCart.js"></script>
+    <script>
+
+function addThisToCart(){
+    var quantity=document.getElementById("myText").value;
+    var price=document.getElementById("demo").innerHTML;
+    var name=document.getElementById("itemName").innerText;
+    if(!quantity){
+        quantity=1;
+    }
+    var c=confirm("Are you sure to add "+quantity+" "+name+" to the cart?");
+    if(c==true){
+        addItemToCart(name,quantity,price);
+    }
+}
+
+    </script>
 
 </head>
 
@@ -121,7 +138,7 @@
                     <!-- Heading Start-->
                     <tr>
                         <td height="160" align="center" valign="middle" colspan="2">
-                            <font face="arial" size="6" color=" #f3971b">
+                            <font face="arial" size="6" color=" #f3971b" id="itemName">
                                 Scàm Gradient Hoodie
                             </font>
                             <hr width="100" color="#f3971b">
@@ -185,7 +202,7 @@
                                                 </ul>
                                                 <hr noshade>
                                                 <br />
-                                                <button  id = "buttonStyle" type="button" onclick="alert('Added To Cart!')">
+                                                <button  id = "buttonStyle" type="button" onclick="addThisToCart()">
                                                     <font face="arial" size="5">Add To Cart</font>
                                                 </button>
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -199,11 +216,10 @@
                                                 
                                                                                                 
 <p></p>
- Quantity: <input type="number" id="myText" value="Name">
+Quantity: <input type="number" id="myText" value="Name" placeholder="item(s)">
 
 
-
-<button onclick="myFunction()"> item(s)</button>
+<button onclick="myFunction()">calculate</button>
 
 <script>
 function myFunction() {

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SCAM CLOTHING CART</title>
+
+    <script src="../addToCart.js"></script>
+    <script>
+      function showCart() {
+        var cartjson=JSON.parse(sessionStorage.getItem("cart"));
+        console.log(cartjson);
+        document.getElementById("cartJson").innerHTML =  sessionStorage.getItem("cart");
+      }
+    </script>
+  </head>
+  <body onload="showCart()"></body>
+    <div id="cartJson"> </div>
+  </body>
+</html>
