@@ -83,20 +83,18 @@ if ( f != "") {
 alert( aa  + bb  + cc  + dd  + ee  + ff );
 
 }
-
-
-        }  
-        
+}         
        
-       
+
        function LoggingFunction() {
        
        var x = localStorage.getItem("savedUser");
        var y = localStorage.getItem("savedPW");
        
-       var InputX
-       var InputY
+       var InputX = document.getElementById("myUserName").value;
+       var InputY = document.getElementById("myPassword").value;
        
+	       
        if (InputX == x && InputY == y)
        {
        alert("Welcome, " + localStorage.getItem("savedName"));
@@ -107,6 +105,11 @@ alert( aa  + bb  + cc  + dd  + ee  + ff );
        {
        alert("Invalid password");
        }
+	
+	else if (InputX == "" || InputY == "")
+	{
+	alert("Please fill out the entire info.");
+	}
        
        else {
        alert("Sorry, we don't recognize you.");
