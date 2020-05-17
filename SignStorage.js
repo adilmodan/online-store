@@ -1,4 +1,5 @@
-		function myFunction() {
+        
+        function myFunction() {
 			var a = document.getElementById("myName").value;
             var b = document.getElementById("myEmail").value;
             var c = document.getElementById("myUser").value;
@@ -85,4 +86,31 @@ alert( aa  + bb  + cc  + dd  + ee  + ff );
 
 
         }  
+        
+       
+       
+       function LoggingFunction() {
+       
+       var x = localStorage.getItem("savedUser");
+       var y = localStorage.getItem("savedPW");
+       
+       var InputX
+       var InputY
+       
+       if (InputX == x && InputY == y)
+       {
+       alert("Welcome, " + localStorage.getItem("savedName"));
+       
+       }
+       
+       else if (InputX == x && InputY != y)
+       {
+       alert("Invalid password");
+       }
+       
+       else {
+       alert("Sorry, we don't recognize you.");
+       }
+       }
+       }
         
