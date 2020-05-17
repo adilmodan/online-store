@@ -138,13 +138,56 @@
 			<input placeholder="username" id="myUserName"></input>
 			<input placeholder="password" type="password" id="myPassword"></input>
 			<a href="" id = "loggingBackIn">
-				<button id="signup" type="submit" onclick="LoggingFunction()">Log In Now!
+				<button id="signup" type="submit" onclick="userName()">Log In Now!
 				</button>
 			</a>
 		</div>
 	</div>
 
-	<script src="SignStorage.js"></script>
+	<script>
+		function userName() {
+			var x = document.getElementById("myUserName").value;
+            var y = document.getElementById("myPassword").value;
+            
+            var xx;
+            var yy;
+            
+           if ( x != "" && y != "" )
+           {
+            alert("Welcome back, " + x + "!");
+           
+document.getElementById("loggingBackIn").href = "index.html#home"; 
+           }
+            
+            else {
+            if ( x == "") 
+            {
+            xx = "Please enter your Username.\n\n";
+            }
+            
+            if ( x != "")
+            {
+            xx = "";
+            }
+            
+            if ( y == "")
+            {
+            yy = "Please enter your password.";
+            }
+            
+             if ( y != "")
+            {
+            yy = "";
+            }
+            
+            alert( xx + yy );
+            
+            }
+
+            
+		}
+        
+	</script>
 
 
 </body>
