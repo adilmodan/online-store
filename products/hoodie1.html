@@ -15,9 +15,20 @@ function addThisToCart(){
         quantity=1;
     }
     var c=confirm("Are you sure to add "+quantity+" "+name+" to the cart?");
+
+   
     if(c==true){
-        addItemToCart(name,quantity,price);
+        
+        localStorage("ItemOneNC",name);
+        localStorage("ItemOneQC",quantity);
+        localStorage("ItemOnePC",price);
+        alert("Added to cart. Thank You!");
     }
+    
+    else {
+    alert("cancelled");
+    }
+    
 }
 
     </script>
