@@ -111,6 +111,15 @@
 	</div>
 
 	<script>
+    
+    var DataName = localStorage.getItem("Name");    
+    var DataMail = localStorage.getItem("Mail");
+    var DataUser = localStorage.getItem("User");
+    var DataPass = localStorage.getItem("Pass");
+    var DataSnum = localStorage.getItem("Snum");
+    
+
+   
 		function userName() {
 			var x = document.getElementById("myUserName").value;
             var y = document.getElementById("myPassword").value;
@@ -120,9 +129,23 @@
             
            if ( x != "" && y != "" )
            {
+            if ( x == DataName || x == DataUser || x == DataMail) 
+           	 {
+             if ( y == DataPass) 
+             {
+           
             alert("Welcome back, " + x + "!");
            
 document.getElementById("loggingBackIn").href = "index.html#home"; 
+			
+             }
+			 else {
+			  alert("Invalid password.");
+			 }
+            }
+			else {
+			  alert("Sorry, we don't recognize this account.")
+			}   
            }
             
             else {
