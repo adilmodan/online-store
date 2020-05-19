@@ -4,21 +4,21 @@
     <title>SCAM CLOTHING CART</title>
     <link rel="stylesheet" type="text/css" href="cart.css">
     <script src="cart.js"></script>
-
-    <script src="../addToCart.js"></script>
+    <!--<script src="../addToCart.js"></script>
     <script>
       function showCart() {
         var cartjson=JSON.parse(sessionStorage.getItem("cart"));
         console.log(cartjson);
         document.getElementById("cartJson").innerHTML =  sessionStorage.getItem("cart");
       }
-    </script>
+    </script>-->
   </head>
   <!--Not Adil's Code:-->
-  <body onload="showCart()"></body>
+  <!--<body onload="showCart()"></body>
     <div id="cartJson"> </div>
-  </body>
+  </body>-->
   <!--Adil's Code-->
+  <body>
   <div class="main">
     <h1>Scam shopping cart</h1>
     <h2 class="sub-heading">Free shipping from $100!</h2>
@@ -74,5 +74,5 @@
   
     </section>
   </div>
-
+</body>
 </html>
