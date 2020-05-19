@@ -140,23 +140,34 @@
  
  
    <script>
-var subTo = localStorage.getItem("ItemOneP") + localStorage.getItem("ItemOnePA") + localStorage.getItem("ItemOnePB") + localStorage.getItem("ItemOnePC") + localStorage.getItem("ItemOnePD") + localStorage.getItem("ItemOnePE") + localStorage.getItem("ItemOnePF") + localStorage.getItem("ItemOnePG") + localStorage.getItem("ItemOnePH") + 
-localStorage.getItem("ItemOnePI") + localStorage.getItem("ItemOnePJ") + localStorage.getItem("ItemOnePK");
 
-var shipFee = (localStorage.getItem("ItemOneQ") + localStorage.getItem("ItemOneQA") + localStorage.getItem("ItemOneQB") + localStorage.getItem("ItemOneQC") + localStorage.getItem("ItemOneQD") + localStorage.getItem("ItemOneQE") + localStorage.getItem("ItemOneQF") + localStorage.getItem("ItemOneQG") + localStorage.getItem("ItemOneQH") + 
-localStorage.getItem("ItemOneQI") + localStorage.getItem("ItemOneQJ") + localStorage.getItem("ItemOneQK"))*0.05;
 
-var taxes = (localStorage.getItem("ItemOneP") + localStorage.getItem("ItemOnePA") + localStorage.getItem("ItemOnePB") + localStorage.getItem("ItemOnePC") + localStorage.getItem("ItemOnePD") + localStorage.getItem("ItemOnePE") + localStorage.getItem("ItemOnePF") + localStorage.getItem("ItemOnePG") + localStorage.getItem("ItemOnePH") + 
-localStorage.getItem("ItemOnePI") + localStorage.getItem("ItemOnePJ") + localStorage.getItem("ItemOnePK"))*0.06;
+var subTy = 
+parseFloat(localStorage.getItem("ItemOneP")) + parseFloat(localStorage.getItem("ItemOnePA")) + parseFloat(localStorage.getItem("ItemOnePB")) + parseFloat(localStorage.getItem("ItemOnePC")) + parseFloat(localStorage.getItem("ItemOnePD")) + parseFloat(localStorage.getItem("ItemOnePE")) + parseFloat(localStorage.getItem("ItemOnePF")) + parseFloat(localStorage.getItem("ItemOnePG")) + parseFloat(localStorage.getItem("ItemOnePH")) + 
+parseFloat(localStorage.getItem("ItemOnePI")) + parseFloat(localStorage.getItem("ItemOnePJ")) + parseFloat(localStorage.getItem("ItemOnePK"));
 
+var shippy = 
+(parseFloat(localStorage.getItem("ItemOneQ")) + parseFloat(localStorage.getItem("ItemOneQA")) + parseFloat(localStorage.getItem("ItemOneQB")) + parseFloat(localStorage.getItem("ItemOneQC")) + parseFloat(localStorage.getItem("ItemOneQD")) + parseFloat(localStorage.getItem("ItemOneQE")) + parseFloat(localStorage.getItem("ItemOneQF")) + parseFloat(localStorage.getItem("ItemOneQG")) + parseFloat(localStorage.getItem("ItemOneQH")) + 
+parseFloat(localStorage.getItem("ItemOneQI")) + parseFloat(localStorage.getItem("ItemOneQJ")) + parseFloat(localStorage.getItem("ItemOneQK")))*0.05;
+
+var taxy = 
+(parseFloat(localStorage.getItem("ItemOneP")) + parseFloat(localStorage.getItem("ItemOnePA")) + parseFloat(localStorage.getItem("ItemOnePB")) + parseFloat(localStorage.getItem("ItemOnePC")) + parseFloat(localStorage.getItem("ItemOnePD")) + parseFloat(localStorage.getItem("ItemOnePE")) + parseFloat(localStorage.getItem("ItemOnePF")) + parseFloat(localStorage.getItem("ItemOnePG")) + parseFloat(localStorage.getItem("ItemOnePH")) + 
+parseFloat(localStorage.getItem("ItemOnePI")) + parseFloat(localStorage.getItem("ItemOnePJ")) + parseFloat(localStorage.getItem("ItemOnePK")))*0.06;
+
+
+var subTo = subTy.toFixed(2);
+var shipFee = shippy.toFixed(2);
+var taxes = taxy.toFixed(2);
 
 var sum = subTo + shipFee + taxes;
+
 
 
 document.getElementById("sub").innerHTML = subTo;
 document.getElementById("ship").innerHTML = shipFee;
 document.getElementById("tax").innerHTML = taxes;
 document.getElementById("tot").innerHTML = sum;
+ 
 
 
 
@@ -169,7 +180,9 @@ if ((subTo + shipFee + taxes + sum ) > 0) {
 	sum = 0;
     
     alert("All Items have been Checked Out!");
-} else {
+} 
+
+else {
 	alert("You currently don't have any items in your cart.");
 }
 }
