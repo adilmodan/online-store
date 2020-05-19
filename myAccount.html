@@ -4,7 +4,6 @@
 <head>
 	<title>SCAM CLOTHING</title>
 	<link rel="stylesheet" type="text/css" href="myAccount.css">
-	<link rel="stylesheet" type="text/css" href="index.css">
 	<script src="myAccount.js"></script>
 </head>
 
@@ -49,11 +48,11 @@
 										<li class="page_item page-item-2"><a class="hassubchild"
 												href="index.html#products">Shop</a>
 											<ul class='children'>
-												<li class="page_item page-item-3"><a href="cart.html">Cart</a></li>
+												<li class="page_item page-item-3"><a href="#">Cart</a></li>
 												<li class="page_item page-item-4"><a href="payment.html">Checkout</a>
 												</li>
 											</ul>
-										<li class="page_item page-item-7"><a class="hassubchild" href="myAccount.html">My Account</a>
+										<li class="page_item page-item-7"><a class="hassubchild" href="#">My Account</a>
 											<ul class='children'>
 												<li><a class="cd-signin" href="login.html">Sign in</a></li>
 												<li><a class="cd-signup" href="signup.html">Sign up</a></li>
@@ -71,60 +70,67 @@
 		</tr>
 	</table>
 	<!-- End Header -->
+    
+   
+   
+   <style>
+* {
+  box-sizing: border-box;
+}
 
-    <!-- Start Form-->
-    <section class="forms-section">
-        <h1 class="section-title">Please Log In to Scàm Clothing</h1>
-        <div class="forms">
-          <div class="form-wrapper is-active">
-            <button type="button" class="switcher switcher-login">
-              Login
-              <span class="underline"></span>
-            </button>
-            <form class="form form-login">
-              <fieldset>
-                <legend>Please, enter your email and password for login.</legend>
-                <div class="input-block">
-                  <label for="login-email">E-mail</label>
-                  <input id="login-email" type="email" required>
-                </div>
-                <div class="input-block">
-                  <label for="login-password">Password</label>
-                  <input id="login-password" type="password" required>
-                </div>
-              </fieldset>
-              <a href="index.html#home"><button type="submit" class="btn-login">Login</button></a>
-            </form>
-          </div>
-          <div class="form-wrapper">
+/* Create two equal columns that floats next to each other */
+.column {
 
-            <button type="button" class="switcher switcher-signup" >
-              Sign Up
-              <span class="underline"></span>
-            </button>
-            <form class="form form-signup">
-              <fieldset>
-                <legend>Please, enter your email, password and password confirmation for sign up.</legend>
-                <div class="input-block">
-                  <label for="signup-email">E-mail</label>
-                  <input id="signup-email" type="email" required>
-                </div>
-                <div class="input-block">
-                  <label for="signup-password">Password</label>
-                  <input id="signup-password" type="password" required>
-                </div>
-                <div class="input-block">
-                  <label for="signup-password-confirm">Confirm password</label>
-                  <input id="signup-password-confirm" type="password" required>
-                </div>
-              </fieldset>
-              <a href="index.html#home">
-                <button type="submit" class="btn-signup" onclick="signup()">Continue</button></a>
-            </form>
-          </div>
-        </div>
-      </section>
-    <!--End Form-->
+  float: left;
+  width: 50%;
+  padding: 50px;
+  height: 500px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+  
+  <script>
+  var accName = localStorage.getItem("Name");
+  var accUser = localStorage.getItem("User");
+  
+  if (accName != "" || accName != null)
+  {
+    document.getElementById("accountName").innerHTML = accName;
+  }
+  
+    if (accUser != "" || accUser != null)
+  {
+    document.getElementById("Uname").innerHTML = accUser;
+  }
+   
+  </script>
+  
+  <body>
+
+
+<div class="row">
+  <div class="column" style="background-color:#303030;">
+    <h2 style="color:white"><div id="accountName">Anonymous</div></h2>
+    <p></p>
+  </div>
+  <div class="column" style="background-color:#fffff;">
+    <h2>Account Information:</h2>
+    <p>Username:			<div id="Uname">-</div></p>
+    <p>Total Items Bought:  <div id="Totalitem">-</div></p>
+    <p>Total cost spent:    <div id="totalSpent">-</div></p>
+    
+  </div>
+  <br><br><br><br><br>
+</div>
+
+</body>
+
 
 	<!-- Start Footer -->
 	<table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#292929">
