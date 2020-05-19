@@ -19,9 +19,9 @@ function addThisToCart(){
   
 if(c==true){
         
-        localStorage("ItemOneNB",name);
-        localStorage("ItemOneQB",quantity);
-        localStorage("ItemOnePB",price);
+        localStorage.setItem("ItemOneNB",name);
+        localStorage.setItem("ItemOneQB",quantity);
+        localStorage.setItem("ItemOnePB",price);
         alert("Added to cart. Thank You!");
     }
     
