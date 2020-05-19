@@ -141,17 +141,15 @@
             var c = document.getElementById("myUser").value;
             var d = document.getElementById("myPW").value;
             var e = document.getElementById("myPWTwo").value;
-            var f = document.getElementById("mySsn").value;
      		
             var aa;
             var bb;
             var cc;
             var dd;
             var ee;
-            var ff;
             
             
-if ( a != "" && b != "" && c != "" && d != "" && e == d && f != ""){
+if ( a != "" && b != "" && c != "" && d != "" && e == d){
 alert("Account Created! We will be VERY responsible with most your information. Welcome To SCÁM, " + a + "!");
 
 document.getElementById("TransitionPage").href = "index.html#home";
@@ -202,16 +200,7 @@ if ( e == d) {
 }
 
 
-if ( f == "") {
-		ff = "Please include your Social Security Number.\n";
-}
-
-if ( f != "") {
-		ff = "";
-}
-
-
-alert( aa  + bb  + cc  + dd  + ee  + ff );
+alert( aa  + bb  + cc  + dd  + ee  );
 
 }
 
