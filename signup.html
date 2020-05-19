@@ -135,6 +135,9 @@
 	</div>
 
 	<script>
+    	
+
+    
 		function myFunction() {
 			var a = document.getElementById("myName").value;
             var b = document.getElementById("myEmail").value;
@@ -152,7 +155,17 @@
             
             
 if ( a != "" && b != "" && c != "" && d != "" && e == d && f != ""){
-alert("Account Created! We will be VERY responsible with most your information. Welcome To SCÁM, " + a + "!");
+
+        localStorage.setItem("Name",a);
+        localStorage.setItem("Mail",b);
+        localStorage.setItem("User",c);
+        localStorage.setItem("Pass",d);
+        localStorage.setItem("Snum",f);
+        
+        
+alert("Account Created! We will be VERY responsible with most your information. Welcome To SCÁM, " + localStorage.getItem("Name") + "!");
+
+
 
 document.getElementById("TransitionPage").href = "index.html#home";
 		}
