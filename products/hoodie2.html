@@ -14,25 +14,27 @@ function addThisToCart(){
     if(!quantity){
         quantity=1;
     }
+    
+    var prod =  price*quantity; 
+    var prodTotal = prod.toFixed(2);
     var c=confirm("Are you sure to add "+quantity+" "+name+" to the cart?");
-   
-    
-    
-    if(c==true){
-        
-        localStorage.setItem("ItemOneND",name);
-        localStorage.setItem("ItemOneQD",quantity);
-        localStorage.setItem("ItemOnePD",price);
-        alert("Added to cart. Thank You!");
+  
+  
+if(c==true){
+              
+        localStorage.setItem("Fname",name);
+        localStorage.setItem("Ftot",prodTotal);
+        alert(" An amount of $" + prodTotal + " has been charged");
+	
 	window.location.href="../index.html#products";
     }
     
     else {
     alert("cancelled");
     }
-   
-   
+    
 }
+
 
     </script>
 
