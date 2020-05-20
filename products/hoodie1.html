@@ -14,15 +14,18 @@ function addThisToCart(){
     if(!quantity){
         quantity=1;
     }
+    
+    var prod =  price*quantity; 
+    var prodTotal = prod.toFixed(2);
     var c=confirm("Are you sure to add "+quantity+" "+name+" to the cart?");
-
-   
-    if(c==true){
-        
-        localStorage.setItem("ItemOneNC",name);
-        localStorage.setItem("ItemOneQC",quantity);
-        localStorage.setItem("ItemOnePC",price);
-        alert("Added to cart. Thank You!");
+  
+  
+if(c==true){
+              
+        localStorage.setItem("Bname",name);
+        localStorage.setItem("Btot",prodTotal);
+        alert(" An amount of $" + prodTotal + " has been charged");
+	
 	window.location.href="../index.html#products";
     }
     
