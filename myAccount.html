@@ -100,14 +100,20 @@
   var accName = localStorage.getItem("Name");
   var accUser = localStorage.getItem("User");
   
-  if (accName != "" || accName != null)
+  if (accName != "" && accName != null)
   {
     document.getElementById("accountName").innerHTML = accName;
   }
   
-    if (accUser != "" || accUser != null)
+    if (accUser != "" && accUser != null)
   {
     document.getElementById("Uname").innerHTML = accUser;
+  }
+  
+  
+  function erase() {
+  
+   localStorage.clear();
   }
    
   </script>
@@ -124,7 +130,8 @@
     <h2>Account Information:</h2>
     <p>Username:			<div id="Uname">-</div></p>
     <p>Total Items Bought:  <div id="Totalitem">-</div></p>
-    <p>Total cost spent:    <div id="totalSpent">-</div></p>
+    <br><br>
+  <button onclick="erase()" style="border-radius: 35%" style="background-color:white">log out</button>
     
   </div>
   <br><br><br><br><br>
