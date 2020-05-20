@@ -7,6 +7,7 @@
     <script src="../addToCart.js"></script>
     <script>
 
+
 function addThisToCart(){
     var quantity=document.getElementById("myText").value;
     var price=document.getElementById("demo").innerHTML;
@@ -14,14 +15,17 @@ function addThisToCart(){
     if(!quantity){
         quantity=1;
     }
+    
+    var prod =  price*quantity; 
+    var prodTotal = prod.toFixed(2);
     var c=confirm("Are you sure to add "+quantity+" "+name+" to the cart?");
-   
+  
+  
 if(c==true){
-        
-        localStorage.setItem("ItemOneNA",name);
-        localStorage.setItem("ItemOneQA",quantity);
-        localStorage.setItem("ItemOnePA",price);
-        alert("Added to cart. Thank You!");
+              
+        localStorage.setItem("Bname",name);
+        localStorage.setItem("Btot",prodTotal);
+        alert(" it eafbas" + prodTotal);
 	
 	window.location.href="../index.html#products";
     }
@@ -29,7 +33,7 @@ if(c==true){
     else {
     alert("cancelled");
     }
-  
+    
 }
 
     </script>
