@@ -142,26 +142,27 @@
  
  
    <script>
+   
+   var a = parseFloat(localStorage.getItem("Atot"));
+   var b = parseFloat(localStorage.getItem("Btot"));
+   var c = parseFloat(localStorage.getItem("Ctot"));
+   var d = parseFloat(localStorage.getItem("Dtot"));
+   var e = parseFloat(localStorage.getItem("Etot"));
+   var f = parseFloat(localStorage.getItem("Ftot"));
+   var g = parseFloat(localStorage.getItem("Gtot"));
+   var h = parseFloat(localStorage.getItem("Htot"));
+   var i = parseFloat(localStorage.getItem("Itot"));
+   var j = parseFloat(localStorage.getItem("Jtot"));
+   var k = parseFloat(localStorage.getItem("Ktot"));
+   var L = parseFloat(localStorage.getItem("Ltot"));
 
-
-var subTy = 
-parseFloat(localStorage.getItem("ItemOneP"))*parseFloat(localStorage.getItem("ItemOneQ"))+ parseFloat(localStorage.getItem("ItemOnePA"))*parseFloat(localStorage.getItem("ItemOneQA"))+ parseFloat(localStorage.getItem("ItemOnePB"))*parseFloat(localStorage.getItem("ItemOneQB"))+ parseFloat(localStorage.getItem("ItemOnePC"))*parseFloat(localStorage.getItem("ItemOneQC"))+ parseFloat(localStorage.getItem("ItemOnePD"))*parseFloat(localStorage.getItem("ItemOneQD"))+ parseFloat(localStorage.getItem("ItemOnePE"))*parseFloat(localStorage.getItem("ItemOneQE"))+ parseFloat(localStorage.getItem("ItemOnePF"))*parseFloat(localStorage.getItem("ItemOneQF"))+ parseFloat(localStorage.getItem("ItemOnePG"))*parseFloat(localStorage.getItem("ItemOneQG"))+ parseFloat(localStorage.getItem("ItemOnePH"))*parseFloat(localStorage.getItem("ItemOneQH"))+ 
-parseFloat(localStorage.getItem("ItemOnePI"))*parseFloat(localStorage.getItem("ItemOneQI"))+ parseFloat(localStorage.getItem("ItemOnePJ"))*parseFloat(localStorage.getItem("ItemOneQJ"))+ parseFloat(localStorage.getItem("ItemOnePK"))*parseFloat(localStorage.getItem("ItemOneQK"));
-
-var shippy = 
-(parseFloat(localStorage.getItem("ItemOneQ")) + parseFloat(localStorage.getItem("ItemOneQA")) + parseFloat(localStorage.getItem("ItemOneQB")) + parseFloat(localStorage.getItem("ItemOneQC")) + parseFloat(localStorage.getItem("ItemOneQD")) + parseFloat(localStorage.getItem("ItemOneQE")) + parseFloat(localStorage.getItem("ItemOneQF")) + parseFloat(localStorage.getItem("ItemOneQG")) + parseFloat(localStorage.getItem("ItemOneQH")) + 
-parseFloat(localStorage.getItem("ItemOneQI")) + parseFloat(localStorage.getItem("ItemOneQJ")) + parseFloat(localStorage.getItem("ItemOneQK")))*0.05;
-
-var taxy = 
-(parseFloat(localStorage.getItem("ItemOneP")) + parseFloat(localStorage.getItem("ItemOnePA")) + parseFloat(localStorage.getItem("ItemOnePB")) + parseFloat(localStorage.getItem("ItemOnePC")) + parseFloat(localStorage.getItem("ItemOnePD")) + parseFloat(localStorage.getItem("ItemOnePE")) + parseFloat(localStorage.getItem("ItemOnePF")) + parseFloat(localStorage.getItem("ItemOnePG")) + parseFloat(localStorage.getItem("ItemOnePH")) + 
-parseFloat(localStorage.getItem("ItemOnePI")) + parseFloat(localStorage.getItem("ItemOnePJ")) + parseFloat(localStorage.getItem("ItemOnePK")))*0.06;
+var subTy = (a + b + c + d + e + f + g + h + i + j + k + L)*0.06;
+var taxy =  (a + b + c + d + e + f + g + h + i + j + k + L)*0.06;
 
 
 var subTo = subTy.toFixed(2);
-var shipFee = shippy.toFixed(2);
 var taxes = taxy.toFixed(2);
-
-var sum = subTo + shipFee + taxes;
+var sum = subTo + taxes;
 
 
 
